@@ -26,3 +26,8 @@ type TAPIAvoResponse = {
   data: TProduct[];
   error?: string;
 };
+
+type TokenRequest = {
+  user: string;
+  password: string;
+};
