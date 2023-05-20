@@ -8,11 +8,10 @@ export default function Home() {
   const [productList, setProductList] = useState<TProduct[]>([]);
 
   useEffect(() => {
-    fetch("api/avo")
-      .then((response) => response.json())
-      .then(({ data, lenght }) => {
-        setProductList(data);
-      });
+    fetch("api/avo/token", { method: "POST", body: JSON.stringify({ user: "hola", password: "password" }) }).then((response) => response.json());
+    // .then(({ data, lenght }) => {
+    //   setProductList(data);
+    // });
   }, []);
 
   return (
