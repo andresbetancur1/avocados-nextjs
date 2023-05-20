@@ -2,6 +2,9 @@
   "name": "platzi-nextjs",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev:inspect": "npm --node-options=--inspect=0.0.0.0:9229 run dev",
     "dev": "next dev",
