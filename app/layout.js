@@ -1,7 +1,11 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 
+// import styles from "./layout.module.css";
+
 const inter = Inter({ subsets: ["latin"] });
+
+import Navbar from "@components/Navbar/Navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,9 +19,19 @@ export default function RootLayout({ children }) {
         <title>Avo Project</title>
       </head>
       <body className={inter.className}>
-        <header>Este es el header</header>
-        {children}
-        <footer>Este es el footer</footer>
+        {/* <div className={styles.container}> */}
+        <div>
+          <header>
+            <Navbar></Navbar>
+          </header>
+          {children}
+          <footer className="container">Este es el footer</footer>
+        </div>
+        <style>{`
+          .container {
+            background: black;
+          }
+        `}</style>
       </body>
     </html>
   );
